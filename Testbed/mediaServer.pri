@@ -3,8 +3,8 @@ INCLUDEPATH += $${HOME_PATH}/BasicUsageEnvironment/include \
                $${HOME_PATH}/liveMedia/include \
                $${HOME_PATH}/UsageEnvironment/include
                
-SOURCES += DynamicRTSPServer.cpp \
-           live555MediaServer.cpp
+SOURCES += mediaServer/DynamicRTSPServer.cpp \
+           mediaServer/live555MediaServer.cpp
 
-HEADERS += DynamicRTSPServer.hh \
-           version.hh
+HEADERS += mediaServer/DynamicRTSPServer.hh \
+           mediaServer/version.hh
