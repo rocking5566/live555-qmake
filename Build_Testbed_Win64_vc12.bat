@@ -8,6 +8,8 @@ IF NOT EXIST mediaServer mkdir mediaServer
 IF NOT EXIST testRTSPClient mkdir testRTSPClient
 IF NOT EXIST openRTSP mkdir openRTSP
 IF NOT EXIST proxyServer mkdir proxyServer
+IF NOT EXIST SimpleRTSPClient mkdir SimpleRTSPClient
+
 
 cd mediaServer
 qmake.exe -spec win32-msvc2013 "CONFIG += x86_64" -r ../../Testbed/mediaServer.pro
@@ -28,5 +30,11 @@ cd proxyServer
 qmake.exe -spec win32-msvc2013 "CONFIG += x86_64" -r ../../Testbed/proxyServer.pro
 nmake
 cd ..
+
+cd SimpleRTSPClient
+qmake.exe -spec win32-msvc2013 "CONFIG += x86_64" -r ../../Testbed/SimpleRTSPClient/SimpleRTSPClient.pro
+nmake
+cd ..
+
 
 pause
